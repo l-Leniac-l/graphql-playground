@@ -3,26 +3,28 @@
   "version": "1.0.0",
   "description": "Playground with graphql and node.js",
   "main": "index.js",
-  "dependencies": {
-    "firebase": "^3.6.2",
-    "graph.ql": "^2.0.0",
-    "graphql": "^0.8.2",
-    "spirit": "^0.4.0",
-    "spirit-router": "^0.4.0"
-  },
-  "devDependencies": {},
   "scripts": {
-    "watch": "nodemon server",
+    "watch": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lnlwd/graphql-playground.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Lenilson <lenilson.100@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lnlwd/graphql-playground/issues"
   },
-  "homepage": "https://github.com/lnlwd/graphql-playground#readme"
+  "homepage": "https://github.com/lnlwd/graphql-playground#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect": "^3.5.0",
+    "firebase": "^3.6.4",
+    "firebase-admin": "^4.0.4",
+    "graphql": "^0.8.2",
+    "graphql-server-express": "^0.4.4",
+    "graphql-tools": "^0.9.0",
+    "lodash": "^4.17.4"
+  }
 }

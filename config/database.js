@@ -1,10 +1,8 @@
-const firebase = require('firebase');
+const admin = require('firebase-admin');
 
-firebase.initializeApp({
+admin.initializeApp({
 	databaseURL: 'https://graphql-playground.firebaseio.com/',
-	serviceAccount: './firebase-auth.json'
+	credential: admin.credential.cert('./firebase-auth.json')
 });
 
-const db = firebase.database();
-
-module.exports = db;
+module.exports = admin.database();
