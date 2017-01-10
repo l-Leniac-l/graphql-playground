@@ -37,7 +37,7 @@ module.exports = `
 
     deletePerson(
       id: ID!
-    ): Person
+    ): ID
   }
 
   schema {
