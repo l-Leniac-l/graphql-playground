@@ -1,4 +1,3 @@
-const bluebird = require('bluebird');
 const db = require('../../config/database');
 
 const ref = db.ref('/person');

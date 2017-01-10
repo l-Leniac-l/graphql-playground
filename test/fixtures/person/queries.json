@@ -1,0 +1,21 @@
+{
+  "getAllPersons": [
+    {
+      "id": "xyz",
+      "name": "Lenilson",
+      "age": 21,
+      "skills": ["HTML5", "CSS3"]
+    },
+    {
+      "id": "xyz",
+      "name": "Lenilson",
+      "age": 21,
+      "skills": ["HTML5", "CSS3"]
+    }
+  ],
+  "getOnePerson": {
+    "name": "Arthur",
+    "age": 25,
+    "skills": ["RUBY", "PYTHON"]
+  }
+}
