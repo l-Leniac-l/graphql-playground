@@ -1,0 +1,23 @@
+{
+   "kind": "Service",
+   "apiVersion": "v1",
+   "metadata": {
+      "name": "graphql",
+      "labels": {
+         "name": "graphql"
+      }
+   },
+   "spec":{
+      "createExternalLoadBalancer": true,
+      "ports": [
+         {
+           "port": 3000,
+           "targetPort": "http-server",
+           "protocol": "TCP"
+         }
+      ],
+      "selector":{
+         "name":"graphql"
+      }
+   }
+}
