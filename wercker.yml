@@ -40,11 +40,7 @@ build:
         code: cp -R ./ "$WERCKER_OUTPUT_DIR"
 
 deploy_container:
-    box:
-      id: mhart/alpine-node:6
-      cmd: /bin/sh
     steps:
-    box: mhart/alpine-node:6
     # use the scratch step to build a container from scratch based on the files present
     - internal/docker-scratch-push:
         username: $QUAY_USERNAME
