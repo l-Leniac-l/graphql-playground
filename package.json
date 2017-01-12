@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index",
     "watch": "nodemon index.js",
-    "test": "mocha"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
