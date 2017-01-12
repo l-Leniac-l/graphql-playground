@@ -4,6 +4,7 @@
   "description": "Playground with graphql and node.js",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "watch": "nodemon index.js",
     "test": "mocha"
   },
