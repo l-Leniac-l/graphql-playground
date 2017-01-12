@@ -47,7 +47,7 @@ deploy_container:
         username: $QUAY_USERNAME
         password: $QUAY_PASSWORD
         tag: $WERCKER_GIT_COMMIT
-        cmd: npm start
+        cmd: /bin/sh -c 'cd pipeline/source && npm start'
         ports: "3000"
         repository: quay.io/lnlwd/graphql-playground
         registry: https://quay.io
