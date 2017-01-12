@@ -27,7 +27,7 @@ cat > kub_dev_controller.json <<EOF
           {
             "imagePullPolicy": "Always",
             "image": "quay.io/lnlwd/graphql-playground:${WERCKER_GIT_COMMIT}",
-            "name": "cities",
+            "name": "graphql",
             "ports": [
               {
                 "name": "http-server",
