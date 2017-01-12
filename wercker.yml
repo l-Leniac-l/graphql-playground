@@ -35,7 +35,7 @@ build:
 
     - script:
         name: copy binary
-        code: cp app kub_dev_service.json kub_dev_controller.json "$WERCKER_OUTPUT_DIR"
+        code: cp ./ "$WERCKER_OUTPUT_DIR"
 
 deploy:
   box: node
