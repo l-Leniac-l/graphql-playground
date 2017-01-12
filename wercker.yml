@@ -27,6 +27,8 @@ build:
     # A step that executes `npm test` command
     - npm-test
 
+    - docker build -t graphql-playground .
+
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
@@ -38,7 +40,7 @@ build:
         code: cp -R ./ "$WERCKER_OUTPUT_DIR"
 
 deploy_container:
-    box: mhart/alpine-node:6
+    box: graphql-playground
     steps:
     # use the scratch step to build a container from scratch based on the files present
     - internal/docker-scratch-push:
