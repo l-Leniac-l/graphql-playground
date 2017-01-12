@@ -46,7 +46,7 @@ deploy:
         password: $QUAY_PASSWORD
         cmd: npm run watch
         tag: $WERCKER_GIT_COMMIT
-        ports: "5000"
+        ports: "3000"
         repository: quay.io/lnlwd/graphql-playground
         registry: https://quay.io
 
