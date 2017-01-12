@@ -11,12 +11,12 @@
       "ports": [
          {
            "port": 3000,
-           "targetPort": "http-server",
-           "protocol": "TCP"
+           "targetPort": 3001,
          }
       ],
       "selector":{
          "name":"graphql"
-      }
+      },
+      "type": "LoadBalancer"
    }
 }
