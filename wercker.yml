@@ -75,5 +75,5 @@ kubernetes_rolling-update:
         username: $KUBERNETES_USERNAME
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
-        command: rolling-update cities
+        command: rolling-update graphql
         image: quay.io/lnlwd/graphql-playground:$WERCKER_GIT_COMMIT
