@@ -1,7 +1,10 @@
 FROM mhart/alpine-node:6
 
-WORKDIR /
-ADD . .
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+
 # If you need npm, don't use a base tag
 RUN npm install
 
