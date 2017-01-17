@@ -36,6 +36,9 @@ cat > kub_dev_controller.json <<EOF
               }
             ],
             "livenessProbe": {
+              "args": [
+                "/graphiql"
+              ],
               "httpGet": {
                 "path": "/healthz",
                 "port": 3000
@@ -44,6 +47,9 @@ cat > kub_dev_controller.json <<EOF
               "timeoutSeconds": 3
             },
             "readinessProbe": {
+              "args": [
+                "/graphiql"
+              ],
               "httpGet": {
                 "path": "/readiness",
                 "port": 3000
