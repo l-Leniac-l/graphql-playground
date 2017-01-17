@@ -40,7 +40,7 @@ cat > kub_dev_controller.json <<EOF
             "imagePullPolicy": "IfNotPresent",
             "name": "liveness",
             "args": [
-              "/graphiql"
+              "/server"
             ],
             "image": "gcr.io/google_containers/liveness",
             "livenessProbe": {
@@ -56,7 +56,7 @@ cat > kub_dev_controller.json <<EOF
             "imagePullPolicy": "IfNotPresent",
             "name": "readiness",
             "args": [
-              "/graphiql"
+              "/server"
             ],
             "image": "gcr.io/google_containers/readiness",
             "readinessProbe": {
