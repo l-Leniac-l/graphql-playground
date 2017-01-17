@@ -34,7 +34,23 @@ cat > kub_dev_controller.json <<EOF
                 "containerPort": 3000,
                 "protocol": "TCP"
               }
-            ]
+            ],
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/healthz",
+                "port": 3000
+              },
+              "initialDelaySeconds": 30,
+              "timeoutSeconds": 3
+            },
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/readiness",
+                "port": 3000
+              },
+              "initialDelaySeconds": 30,
+              "timeoutSeconds": 3
+            }
           }
         ]
       }
