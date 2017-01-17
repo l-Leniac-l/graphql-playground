@@ -40,16 +40,16 @@ cat > kub_dev_controller.json <<EOF
                 "path": "/graphiql",
                 "port": 3000
               },
-              initialDelaySeconds: 3,
-              periodSeconds: 3
+              "initialDelaySeconds": 3,
+              "periodSeconds": 3
             },
             "readinessProbe": {
               "httpGet": {
                 "path": "/graphiql",
                 "port": 3000
               },
-              initialDelaySeconds: 3,
-              periodSeconds: 3
+              "initialDelaySeconds": 3,
+              "periodSeconds": 3
             }
           }
         ]
