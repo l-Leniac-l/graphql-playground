@@ -34,38 +34,22 @@ cat > kub_dev_controller.json <<EOF
                 "containerPort": 3000,
                 "protocol": "TCP"
               }
-            ]
-          },
-          {
-            "imagePullPolicy": "IfNotPresent",
-            "name": "liveness",
-            "args": [
-              "/server"
             ],
-            "image": "gcr.io/google_containers/liveness",
             "livenessProbe": {
               "httpGet": {
-                "path": "/healthz",
+                "path": "/graphiql",
                 "port": 3000
               },
-              "initialDelaySeconds": 5,
-              "periodSeconds": 5
-            }
-          },
-          {
-            "imagePullPolicy": "IfNotPresent",
-            "name": "readiness",
-            "args": [
-              "/server"
-            ],
-            "image": "gcr.io/google_containers/readiness",
+              initialDelaySeconds: 3,
+              periodSeconds: 3
+            },
             "readinessProbe": {
               "httpGet": {
-                "path": "/readiness",
+                "path": "/graphiql",
                 "port": 3000
               },
-              "initialDelaySeconds": 5,
-              "periodSeconds": 5
+              initialDelaySeconds: 3,
+              periodSeconds: 3
             }
           }
         ]
