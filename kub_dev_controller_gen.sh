@@ -44,7 +44,7 @@ cat > kub_dev_controller.json <<EOF
                 "port": 3000
               },
               "initialDelaySeconds": 30,
-              "timeoutSeconds": 3
+              "timeoutSeconds": 5
             },
             "readinessProbe": {
               "args": [
@@ -55,7 +55,7 @@ cat > kub_dev_controller.json <<EOF
                 "port": 3000
               },
               "initialDelaySeconds": 30,
-              "timeoutSeconds": 3
+              "timeoutSeconds": 5
             }
           }
         ]
