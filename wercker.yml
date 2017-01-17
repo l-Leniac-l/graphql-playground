@@ -69,6 +69,15 @@ kubernetes_initialize:
         insecure-skip-tls-verify: true
         command: create -f kub_dev_service.json
 
+kubernetes_healthchecker:
+    steps:
+    - kubectl:
+        server: $KUBERNETES_MASTER
+        username: $KUBERNETES_USERNAME
+        password: $KUBERNETES_PASSWORD
+        insecure-skip-tls-verify: true
+        command: create -f kub_dev_health.yml
+
     # Update the replica controller to $WERCKER_GIT_COMMIT
 kubernetes_rolling-update:
     steps:
